@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+     containers:
+      - name: postgres 
+        image: postgres:9.4
+        imagePullPolicy: Always
+        env:
+          - name: POSTGRES_USER
+            valueFrom:
+              secretKeyRef:
+                name: postgres
+                key: POSTGRES_USER
+          - name: POSTGRES_PASSWD
+            valueFrom:
+              secretKeyRef:
+                name: postgres
+                key: POSTGRES_PASSWD
+        ports:
+          - containerPort: 5432
+        volumeMounts:
+         - name: db-pvc
+           mountPath: /var/lib/postgresql/data
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+     volumes:
+       - name: db-pvc
+      
+                                           
