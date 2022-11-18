@@ -1,0 +1,7 @@
+Log created: 2022-11-09T11:35:57.092039000Z
+Process ID:  50705 (0xc611)
+Parent PID:  2597 (0xa25)
+Executable:  /opt/VirtualBox/VBoxSVC
+Arg[0]: /opt/VirtualBox/VBoxSVC
+Arg[1]: --auto-shutdown
+AddRef: illegal refcnt=3221225469 state=2

@@ -1,0 +1,12 @@
+Log created: 2022-11-09T11:35:57.214725000Z
+Process ID:  70134 (0x111f6)
+Parent PID:  2597 (0xa25)
+Executable:  /opt/VirtualBox/VBoxHeadless
+Arg[0]: /opt/VirtualBox/VBoxHeadless
+Arg[1]: --comment
+Arg[2]: virtualbox-minikube_fedora-minikube_1667976002379_52960
+Arg[3]: --startvm
+Arg[4]: 7b19d470-e872-4e81-a6bc-89a67b4c1e62
+Arg[5]: --vrde
+Arg[6]: config
+AddRef: illegal refcnt=3221225469 state=2
